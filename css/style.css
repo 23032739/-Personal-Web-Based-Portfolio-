@@ -1,0 +1,440 @@
+/* :root It's used to store global variables (like colors, sizes, fonts) */
+:root {
+    --text-color:#1a1c20;
+    --link-color:#4a76ee;
+    --background-color:#eeeff1;
+}
+
+/* Universal selector to target each every element */
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box; /*this line makes sure the size and calculation remain same without changing*/
+}
+
+html {
+    scroll-behavior: smooth;/*Makes sure that the scroll is smooth and balanced*/
+}
+
+body {
+    font-family:'Poppins',sans-serif;
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none; /*this removes underlines from the link which makes it clean*/
+}
+
+a .btn{
+    transition-duration: all 300ms ease;
+}
+
+a:hover {
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset: 1rem; /*create a space between the text and the line*/
+    text-decoration-color: rgb(173, 173, 173);
+}
+
+/* Desktop Navbar */
+nav .Desktop{
+    display: flex;
+    justify-content: flex-end;
+    height: 17vh;
+    margin-right: 145px;
+    margin-top: 35px;
+
+}
+
+.Desktop {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.2rem;
+    
+}
+
+/* Desktop Menu */
+#Desktop-nav {
+    display: none; /*these so that the Menu does npt showup on a normal desktop screen*/
+}
+
+.Desktop-Menu {
+    position: relative;
+    display: inline-block;
+}
+
+.Menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;/*change into a hand to point*/
+}
+
+.Menu-icon span {
+    width: 100%;
+    height: 2px;
+    background-color:black ;
+    transition: all 0.3 ease-in-out;
+}
+
+.Menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.Menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.Menu-links li {
+    list-style: none;
+}
+
+.Menu-links.open {
+    max-height: 300px;
+}
+
+.Menu-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.Menu-icon.open span:nth-child(2) {
+opacity: 0; /*removing the second line completely*/
+}
+
+.Menu-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.Menu-icon span:first-child {
+    transform: none;
+}
+
+.Menu-icon span:first-child {
+    opacity: 1;
+}
+
+.Menu-icon span:first-child {
+    transform: none;
+}
+
+/* Section */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+
+    min-height:fit-content;
+}
+
+.Home-text-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family:  'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    text-align: left;
+    position: relative;
+    top: -63px;
+    left: -53px;
+
+
+}
+
+.Home-text-right h2 {
+    font-weight: lighter;
+    font-size: 26px;
+}
+
+.learn-more a {
+    font-size: 20px;
+}
+
+.learn-more a:hover {
+text-decoration: none;
+}
+
+hr {
+    width: 112px;
+    border: 1px black solid;
+}
+
+.Home-Photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+ img {
+    max-width: 72%;
+    margin-top: -230px;
+}
+
+
+.rectangle-outer {
+    position: absolute;
+    width: 1350px;
+    height: 390px;
+    background-color: rgb(255, 213, 213);
+    z-index: -1;
+    right: 0;
+    top: 250px;
+}
+
+.rectangle-inner {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(255, 213, 213);
+    bottom: -100px;
+
+}
+
+/* Buttons */
+.btn_container button{
+    font-weight: 600;
+    padding: 13px;
+    transition: all 300ms ease;
+    width: 8rem;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn_container button:hover {
+    cursor: pointer;
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+/* About */
+#About {
+    display: flex;
+    flex-direction: column;
+}
+
+.text_p1 {
+    display: block;
+    font-size: 18px;
+    margin-top: -12px;
+}
+
+.title {
+    display: block;
+    font-size: 38px; 
+    margin-top: -110px; 
+    font-weight: 700;
+}
+
+.about-details-container {
+    display: flex; 
+    flex-direction: row; 
+    /* flex-wrap: wrap; */
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 12rem; 
+    /* padding-left: 13rem; */
+}
+
+.details-container, .details-container-1 {
+    flex: 1; 
+    max-width: 45%;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: -23rem;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+}
+
+
+.skills {
+   text-align: center;
+   margin-top: -6rem; 
+   font-size: 21px;
+}
+
+.skills h1 {
+    margin-top: -83px;
+    margin-bottom: 23px;
+}
+
+.T_skills {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* gap: 1rem; */
+    /* margin-top: 1rem; */
+}
+
+.T_skills p {
+    margin-left: 50px;
+    padding: 1rem;
+    width: 170px;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+}
+
+/* PROJECT SECTION */
+#Projects {
+    max-width: 100%;
+    padding: 0 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+
+
+#Projects h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 90px;
+}
+
+.project-card {
+    background: white;
+    padding: 90px;
+    width: 790px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-card h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--text-color);
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 1rem 1rem;
+}
+
+.project-card .btn {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--link-color);
+    color: white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .btn:hover {
+    background-color: #3a5bb5;
+}
+
+/* #ContactBAR */
+#Contact {
+display: flex; /*used to organize two div to the left and right*/
+justify-content: space-between; /*space between the divs*/
+align-items: center;
+padding: 0 50px;
+height: 80px;
+}
+
+/* target #Contact left in respect to a */
+#Contact {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    margin-top: 4rem;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 8rem; /* Add some padding */
+    height: auto; /* Adjust height to fit content */
+    text-align: center; /* Center-align text */
+}
+
+/* Style the left and right links */
+ #Contact .right a {
+    font-size: 1.5rem; /* Increase font size */
+    font-weight: 600;
+    margin-left: 2rem;/* Add spacing between items */
+}
+
+.right {
+    margin-top: 7rem;
+}
+/* Style the last child (email button) */
+#Contact .right a:last-child {
+    font-size: 1.5rem; /* Increase font size */
+    padding: 10px 20px; /* Add more padding */
+    border-radius: 10px; /* Rounder corners */
+}
+
+/* Style the icons */
+#Contact .right span {
+    font-size: 2rem; /* Increase icon size */
+    margin-left: 10px; /* Add spacing between icon and text */
+}
+
+.Linkedin {
+    color: #4a76ee;
+}
+
+#Contact h1 {
+    font-size: 44px;
+}
+
+footer {
+    height: 20vh;
+    margin: 0 1rem;
+}
+    
+footer p {
+    text-align: center;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link gives more options when it comes to font style -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link file style.css with html -->
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/mediaqueries.css">
+     <!-- link for the icons like github -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+   />
+   
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+     <nav id="Desktop">
+
+        <ul class="Desktop">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+     </nav>
+
+        <nav id="Desktop-nav">
+        <div class="Desktop-Menu">
+            
+            <div class="Menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+             </div>
+
+             <div class="Menu-links">
+            <li><a href="#Home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#About" onclick="toggleMenu()">About</a></li>
+            <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
+             </div>
+
+        </div>
+     </nav>
+
+     <!-- main where most main-code will go -->
+      <main>
+        <!-- Section 1:Intro -->
+        <section id="Home">
+
+            <div class="Home-text-left">
+                <h1>AMOKELANE</h1>
+                <h2>BELE</h2>
+            </div>
+
+            <div class="Home-photo">
+                <img src="images/Photo.png" alt="Amo Bele photo" >
+            </div>
+
+            <div class="Home-text-right">
+                <h2>Hi, I am Amokelane Bele 👋.</h2>
+                <p>I am a second-year Computer Science student with a solid foundation in programming, AI, and software development. I am passionate about Machine Learning, Cybersecurity, and creating impactful solutions through code.</p>
+                
+                <div class="learn-more"><a href="#" target="_blank"><span>Learn More</span></a></div>
+                <hr>
+
+                <div class="rectangle-outer">
+                    <div class="rectangle-inner"></div>
+                </div>
+
+                <br>
+
+                <div class="btn_container button">
+                    <button onclick="window.open('PDF/Amokelane_Bele CV.pdf')">Download CV</button>
+                </div>
+
+            </div>
+        </section> 
+
+        <!-- Section 2:About me -->
+        <section id="About">
+            <p class="text_p1">Get to know more</p>
+            <p class="title">About Me</p>
+
+            <br><br>
+
+            <div class="section-container">
+
+                <div class="about-details-container">
+                    <div class="details-container">
+                        <p class="Experience-icon"><i class="fa-solid fa-certificate"></i></p>
+                        <span>Experience</span>
+                        <p>2nd year Computer Science</p>
+                    </div>
+                
+                    <div class="details-container-1">
+                        <p class="Experience-icon"><i class="fa-solid fa-user-graduate"></i></p>
+                        <span>Education</span>
+                        <p>University of Venda</p>
+                        <p>B.sc. Computer Science</p>
+                    </div>
+                    </div>
+
+                   
+
+            </div>
+
+            <div class="skills">
+                <h1>Skills</h1>
+                <div class="T_skills">
+                   <p><i class="fa-brands fa-html5"></i><span>HTML-5</span></p>
+                   <p><i class="fa-brands fa-css3-alt"></i><span>CSS</span></p>
+                   <p><i class="fa-brands fa-js"></i><span>JS</span></p>
+                   <p><i class="fa-brands fa-java"></i><span>JAVA</span></p>
+                </div>
+            </div>
+
+            </div>
+            
+        </section>
+
+        <!-- Section 3:Projects -->
+        <section id="Projects">
+            <h1>My Projects</h1>
+            <div class="project-gallery">
+                <div class="project-card">
+                    <img src="images/Coffee.jpg" alt="Project One">
+                    <h2>Coffee Survey</h2>
+                    <p>Cape Coffee is a survey tool built with VS Code with HTML_5 & CSS.</p>
+                    <a href="https://github.com/23032739/Cape-Coffee.git" class="btn" target="_blank"><i class="fa-brands fa-github"></i><span>Github</span></a>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/Gallary.png" alt="Project Two">
+                    <h2>Photo Gallary  </h2>
+                    <p>Gallery is image display built with VS Code with HTML_5 & CSS.</p>
+                    <a href="https://github.com/23032739/Photo-Gallary.git" class="btn" target="_blank"><i class="fa-brands fa-github"></i><span>Github</span></a>
+                </div>
+            </div>
+        </section>
+          
+        <!-- Section 4:Contacts -->
+        <section id="Contact">
+            <p>Get in Touch</p>
+            <h1>Contact Me</h1>
+            <div class="right">
+                <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i><span>Github</span>
+                <!-- </a> this link will open a new tab since it's external -->
+    
+                <a href="https://www.linkedin.com/in/amokelane-bele-bb0550309/" target="_blank" class="Linkedin"><i class="fa-brands fa-linkedin"></i><span>Linkedin</span>
+                </a>
+    
+                <a href="mailto:dionamu267@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i><span>Email</span>
+                </a> 
+        </section>
+
+        <footer>
+            <p>Copyright &#169; 2025 Amokelane Bele, All Rights Reserved.</p>
+        </footer>
+
+      </main>
+      
+
+      <script src="script.js"></script>
+    
+</body>
+</html>
